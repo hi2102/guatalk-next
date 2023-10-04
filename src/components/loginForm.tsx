@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function LoginForm() {
 	return (
 		<form className='w-full flex flex-col gap-2 mt-4'>
@@ -21,13 +23,20 @@ export default function LoginForm() {
 				type='button'>
 				로그인
 			</button>
-			<div className='text-xs flex justify-start items-center h-5 gap-1 text-[#777]'>
-				<input id='checkbox' type='checkbox' name='autoLogin' />
-				<label
-					htmlFor='checkbox'
-					className='hover:cursor-pointer hover:font-semibold'>
-					실행시 자동 로그인
-				</label>
+			<div className='text-xs flex justify-between items-center h-5 gap-1 text-[#777]'>
+				<div className='flex justify-start items-center'>
+					<input id='checkbox' type='checkbox' name='autoLogin' />
+					<label
+						htmlFor='checkbox'
+						className='hover:cursor-pointer hover:font-semibold'>
+						실행시 자동 로그인
+					</label>
+				</div>
+				<Link
+					href='/sign-up'
+					className='hover:cursor-pointer hover:text-[#555] transition-all '>
+					회원 가입
+				</Link>
 			</div>
 		</form>
 	);
