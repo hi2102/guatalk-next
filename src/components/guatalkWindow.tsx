@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { forwardRef, MouseEvent } from 'react';
-import LoginWithSns from './loginWithSns';
 import LoginForm from './loginForm';
 
 interface Props {
@@ -21,7 +20,7 @@ const GuaTalkWindow = forwardRef<HTMLParagraphElement | null, Props>(
 				onMouseDown={onMouseDown}
 				onMouseMove={onMouseMove}
 				onMouseUp={onMouseUp}
-				className='w-1/3 h-[40rem] bg-[#FEE500] p-5 rounded-xl'
+				className='w-[25rem] h-[40rem] bg-[#FEE500] p-5 rounded-xl'
 				style={{
 					transform: `translate(${position.x}px, ${position.y}px)`,
 					cursor: isMouseDown ? 'grabbing' : 'grab',
@@ -40,7 +39,6 @@ const GuaTalkWindow = forwardRef<HTMLParagraphElement | null, Props>(
 					</div>
 
 					<LoginForm />
-					<LoginWithSns />
 				</>
 			</div>
 		);
